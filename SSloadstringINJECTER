@@ -1,8 +1,9 @@
--- first variables
+-- [LEAKED TUBERS SS GUI] --
+-- script made by Tubers93
 
 local Settings = {
     Prefix = ";", 
-    Version = "3.0.1", 
+    Version = "3.0.2", 
     
     CommandKey = "BackSlash", -- see: "https://developer.roblox.com/en-us/api-reference/enum/KeyCode" for all key codes
     GuiLogo = "http://www.roblox.com/asset/?id=5234318900"
@@ -1127,7 +1128,7 @@ Admin.AddCommand("unchangestate", "Disables player changestate if player is stat
     end
 end, "player(s)")
 
-Admin.AddCommand("kill", "Kills player but its client, try ;tkill (localplayer doesn't need to be claimed).", function(player)   
+Admin.AddCommand("Ckill", "CKills player but its client, try ;tkill (localplayer doesn't need to be claimed).", function(player)   
     if Admin.GetShortenedPlrFromName(player) ~= nil then
         local Player
         for i, v in pairs(Admin.GetShortenedPlrFromName(player)) do
@@ -1141,7 +1142,7 @@ Admin.AddCommand("kill", "Kills player but its client, try ;tkill (localplayer d
     end
 end, "player(s)")
 
-Admin.AddCommand("tkill", "TouchKills player", function(player)   
+Admin.AddCommand("kill", "Kills player", function(player)   
     if Admin.GetShortenedPlrFromName(player) ~= nil then
         local Player
         for i, v in pairs(Admin.GetShortenedPlrFromName(player)) do
@@ -1229,7 +1230,7 @@ Admin.AddCommand("frespawn/fastrespawn/fspawn", "Respawns you quicker than usual
     heartbeat:Disconnect()
 end)
 
-Admin.AddCommand("bring", "brings player but kills u.", function(player)   
+Admin.AddCommand("Bring", "bring player.", function(player)   
     if Admin.GetShortenedPlrFromName(player) ~= nil then
         local Player
 
@@ -1283,7 +1284,7 @@ Admin.AddCommand("bring", "brings player but kills u.", function(player)
                     end
                 end
             else
-                return Admin.Notify("Need 1 tool", "You need at least 1 tool in order to claim player", 5)
+                return Admin.Notify("Need 1 tool", "You need at least 1 tool in order to bring player", 5)
             end
         end
     else
@@ -1368,7 +1369,7 @@ local NewClaim = function(plr)
     end
 end
 
-Admin.AddCommand("fastbring/fbring", "Fast brings player.", function(player)   
+Admin.AddCommand("trip/fall", "trips or falls player.", function(player)   
     if Admin.GetShortenedPlrFromName(player) ~= nil then
         local Player
 
@@ -1629,7 +1630,7 @@ end, "player(s)")
 
 
 
-Admin.AddCommand("servercrasher", "Crashes server. If not, lags server really badly.", function(strength)
+Admin.AddCommand("Scrash", "Crashes server. If not, lags server really badly.", function(strength)
     if typeof(tonumber(strength)) == "number" then
         wait(0.45)
         local moduleApiTable = require(game.Players.LocalPlayer.PlayerScripts.ChatScript.ChatMain)
@@ -1700,7 +1701,7 @@ Admin.AddCommand("Fakechat", "Creates a fake white chat message from another use
     end
 end, "player(s)", "message")
 
-Admin.AddCommand("GrabKnife", "Loads FE grab knife remake", function()
+Admin.AddCommand("FeGrabKnife", "Loads FE grab knife remake", function()
     local KnifeAccessory
 
     if LocalPlayer:FindFirstChild("-Running") then
